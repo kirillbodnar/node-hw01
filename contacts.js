@@ -8,7 +8,7 @@ async function listContacts() {
   try {
     const dataJSON = await fs.readFile(contactsPath, "utf-8");
     const data = JSON.parse(dataJSON);
-    console.log(data);
+    console.table(data);
   } catch (error) {
     console.log(error);
   }
